@@ -90,17 +90,18 @@ For multi-step inquiries, follow the structured sequences documented in [referen
 When synthesizing research, adhere strictly to GEX Monitor methodology:
 
 1. **Price Action Has Priority**: Market price movement supersedes model assumptions. If spot breaches a Wall, report the breakout rather than asserting the model is flawed.
-2. **Walls Are Sensitivity Areas**: Call Walls and Put Walls mark dealer hedging inflection zones, never guaranteed support or resistance.
-3. **Volume $\neq$ Trade Direction**: High trading volume does not automatically imply buying pressure. Inspect trade side, aggression, and OI changes.
-4. **Activity $\neq$ Conviction**: High turnover frequently reflects delta-neutral rebalancing or spread execution rather than directional speculation.
-5. **Separate Analytical Layers**:
-   - **Observed Data**: Factual figures returned directly by tools.
-   - **Structural Interpretation**: Mechanism-based analysis of dealer hedging incentives.
-   - **Conditional Inference**: Scenarios contingent on specific triggers.
-6. **No Deterministic Predictions**: Avoid statements like "BTC will definitely rise" or "the Put Wall must hold."
-7. **Focus on Mechanisms**: Emphasize where positioning changes hedging pressure, where volatility is being repriced, and what invalidates the outlook.
-8. **Terminology Precision**: Use the term **"path"** (or in Chinese: **"路径"**). Never use the Chinese term **"剧本"**.
-9. **Conditional Phrasing**: Prefer formulations like *"If spot remains above [level], the structure is consistent with..."* and *"This interpretation weakens if..."*.
+2. **Positive Gamma $\neq$ Bullish**: Positive Gamma dampens volatility and induces mean-reverting dealer hedging; it is never an unconditionally bullish directional signal. Negative Gamma amplifies moves in either direction.
+3. **Walls & Flip Are Sensitivity Zones**: Call Walls, Put Walls, and Gamma Flip levels mark dealer hedging sensitivity zones, never unconditional buy/sell signals or guaranteed support/resistance.
+4. **Aggression $\neq$ Open Interest Growth**: Taker buying must be distinguished from net open interest (OI) growth. High volume frequently reflects delta-neutral rebalancing or position liquidation.
+5. **Preserve Multi-Leg & Open/Close Evidence**: Multi-leg spread executions and open vs. close flags must be preserved. Never claim to know institutional "whale" intent or sentiment.
+6. **No Win-Rate Promises**: Never promise trading win-rates or profitability without complete live quotes, execution slippage models, and historical backtests.
+7. **Separate Analytical Layers**:
+   - **Observed Data**: Factual trade prints and exchange figures returned by tools.
+   - **Calculated Results**: Model-derived Net GEX, Greeks, and volatility surfaces.
+   - **Conditional Inference**: Analytical scenarios contingent on specific mechanism triggers.
+8. **Adaptive Depth**: Simple factual inquiries prioritize a concise market glance; complex multi-leg or cross-asset requests expand into detailed structured analysis.
+9. **Timestamp Attribution**: Always disclose data observation time (`as_of`), quoting both UTC and Beijing Time (UTC+8), primary sources, and degradation flags (`partial` / `stale`).
+10. **Terminology Precision**: Use the term **"path"** (or in Chinese: **"路径"**). Never use the Chinese term **"剧本"**.
 
 See [references/data-contract.md](references/data-contract.md) for full interpretation principles and freshness contracts.
 
